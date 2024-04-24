@@ -1,9 +1,11 @@
 package br.com.dentech.todojava.web;
 
-import org.apache.coyote.BadRequestException;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
+
+import br.com.dentech.todojava.exception.BadRequestException;
 
 @ControllerAdvice
 public class GeneralExceptionHandler {
