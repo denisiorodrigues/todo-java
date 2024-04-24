@@ -1,4 +1,4 @@
-package br.com.dentech.todojava.controller;
+package br.com.dentech.todojava.web;
 
 import org.springframework.web.bind.annotation.RestController;
 
