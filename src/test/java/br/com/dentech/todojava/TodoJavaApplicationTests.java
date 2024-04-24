@@ -31,7 +31,14 @@ class TodoJavaApplicationTests {
 			.jsonPath("$[0].priority").isEqualTo(todo.getPriority());
 	}
 
-	void testCreateTodoFalure() {
+	@Test
+	void testCreateTodoFailure() {
+		webTestClient
+			.post()
+			.uri("/todos")
+			.bodyValue(new Todo(null, null, false, 0))
+			.exchange()
+			.expectStatus().isBadRequest();
 	}
 
 }
